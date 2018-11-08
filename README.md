@@ -13,3 +13,5 @@ It ships the following component versions:
 - JDK 8u181
 - Scala 2.12.7
 - SBT 1.2.6
+
+Run in interactive mode to build from the current directory: `docker run -v $(pwd):/build -it segence/sbt-build:0.1.1 bash`
