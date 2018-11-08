@@ -10,7 +10,10 @@ RUN apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys F76
 RUN apt-get update && apt-get install -y \
     make \
     docker-engine \
+    python-pip \
 && rm -rf /var/lib/apt/lists/*
 
 RUN curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 RUN chmod +x /usr/local/bin/docker-compose
+
+RUN pip install awscli --upgrade
